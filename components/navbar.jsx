@@ -33,7 +33,7 @@ export const Navbar = props => {
             className='p-1 mt-2 shadow menu menu-compact dropdown-content bg-red-700 rounded-box w-6/6 pr-0'
           >
           <li>
-            <Link href='/' passHref>
+            <Link href='https://utility.theshadyclass.xyz/' passHref>
               <button className='tracking-wide uppercase'>
                 HOME 👻
               </button>
@@ -54,7 +54,7 @@ export const Navbar = props => {
             </Link>
           </li>
           <li>
-            <Link href='bulktransfer' passHref>
+            <Link href='https://utility.theshadyclass.xyz/bulktransfer' passHref>
               <button className='tracking-wide uppercase'>
                 BULK TRANSFER ⚡
               </button>
@@ -68,18 +68,16 @@ export const Navbar = props => {
             </Link>
           </li>
           <li>
-            <Link href='staking' passHref>
+            <Link href='https://utility.theshadyclass.xyz/staking' passHref>
               <button className='tracking-wide uppercase'>
                 STAKING ⛏️
               </button>
             </Link>
           </li>
           <li>
-            <Link href='fm' passHref>
+            <Link href='/' passHref>
               <button className='tracking-wide uppercase'>
-              ♦ FUND MANAGER 💰 (LIVE - NEW)
-              
-                
+              FUND MANAGER 💰
               </button>
             </Link>
           </li>
@@ -113,7 +111,7 @@ export const Navbar = props => {
         <ul className='shadow-white menu menu-horizontal'>
 
         <li>
-            <Link href='/' passHref> 
+            <Link href='https://utility.theshadyclass.xyz/' passHref> 
               <button className='tracking-wide font-bold uppercase'>
                 HOME
               </button>
@@ -182,16 +180,14 @@ export const Navbar = props => {
             </Link>
           </li>
           <li>
-            <Link href='fm' passHref>
+            <Link href='/' passHref>
               <button className='tracking-wide uppercase'>
               ♦ FUND MANAGER 💰 (LIVE - NEW)
-              
-                
               </button>
             </Link>
           </li>
           <li>
-            <Link href='bulktransfer' passHref>
+            <Link href='https://utility.theshadyclass.xyz/bulktransfer' passHref>
               <button className='tracking-wide uppercase'>
               ♦ BULK TRANSFER ⚡
               </button>
@@ -251,7 +247,7 @@ export const Navbar = props => {
           </li> 
 */}
           <li>
-            <Link href='staking' passHref>
+            <Link href='https://utility.theshadyclass.xyz/staking' passHref>
               <button className='tracking-wide font-bold uppercase'>
                 STAKING (UP NOW!)
               </button>
@@ -268,7 +264,7 @@ export const Navbar = props => {
             className='p-1 shadow menu dropdown-content bg-red-700 border-4 rounded-md rounded-none w-72'
           >
           <li>
-            <Link href='tube' passHref>
+            <Link href='https://utility.theshadyclass.xyz/tube' passHref>
               <button className='tracking-wide uppercase'>
               ♦ THE TUBE (Devnet)
               </button>

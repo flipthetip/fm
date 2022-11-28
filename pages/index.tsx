@@ -23,7 +23,7 @@ const approvedAccounts = ['Web3 Chibis in the Solana network. 3,333 chibified av
 
 const walletPublicKey = "";
 
-const Home: NextPage = () => {
+const Fm: NextPage = () => {
 
   const [to, setTo] = useState('')
   const { publicKey, signTransaction, connected } = useWallet()
@@ -565,6 +565,7 @@ const Home: NextPage = () => {
             setIsSending(false);
             setSignature(signature)
           }
+          window.location.reload();
 
         } catch (error) {
           const err = (error as any)?.message;
@@ -718,6 +719,7 @@ const Home: NextPage = () => {
             setIsSending(false);
             setSignature(signature)
           }
+          window.location.reload();
         }
 
         catch (error) {
@@ -812,6 +814,7 @@ const Home: NextPage = () => {
             setIsSending(false);
             setSignature(signature)
           }
+          window.location.reload();
         }
 
         catch (error) {
@@ -1138,6 +1141,8 @@ const Home: NextPage = () => {
                   Fund Manager - SOL/SPL Token 
                 </h4>
                 <h3 className="font-semibold text-md pb-5" >Mass send SOL/SPL Token to many wallets at once.</h3>
+                <h3 className="text-sm pb-5 px-12" ><i>Note: If you just made a transfer of SOL/SPL token, the window will refresh if the transfer was <b>SUCCESSFUL</b>. <br/>
+                Please check Solscan for transaction confirmation.</i></h3>
 
 
                 {nbToken == '' && CurrencyType == '' &&
@@ -1298,7 +1303,7 @@ const Home: NextPage = () => {
                               />
                               ◼
                               {!isChecked &&
-                                <input className="sm:mb-[1%] mb-2 w-[150px] text-md h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                                <input className="sm:mb-[1%] mb-2 w-[150px] text-md h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                   type="number"
                                   step="any"
                                   min="0"
@@ -1326,7 +1331,7 @@ const Home: NextPage = () => {
                                 // }}
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1352,7 +1357,7 @@ const Home: NextPage = () => {
                                 // }}der-0
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1379,7 +1384,7 @@ const Home: NextPage = () => {
                                 // }}der-0
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1406,7 +1411,7 @@ const Home: NextPage = () => {
                                 // }}der-0
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1433,7 +1438,7 @@ const Home: NextPage = () => {
                                 // }}der-0
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1460,7 +1465,7 @@ const Home: NextPage = () => {
                                 // }}der-0
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1487,7 +1492,7 @@ const Home: NextPage = () => {
                                 // }}der-0
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1514,7 +1519,7 @@ const Home: NextPage = () => {
                                 // }}der-0
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1541,7 +1546,7 @@ const Home: NextPage = () => {
                                 // }}der-0
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1616,7 +1621,7 @@ const Home: NextPage = () => {
                               />
                               ◼
                               {!isChecked &&
-                                <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                                <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                   type="number"
                                   step="any"
                                   min="0"
@@ -1644,7 +1649,7 @@ const Home: NextPage = () => {
                                 // }}der-0
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1670,7 +1675,7 @@ const Home: NextPage = () => {
                                 // }}der-0
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1697,7 +1702,7 @@ const Home: NextPage = () => {
                                 // }}der-0
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1724,7 +1729,7 @@ const Home: NextPage = () => {
                                 // }}der-0
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1751,7 +1756,7 @@ const Home: NextPage = () => {
                                 // }}der-0
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1778,7 +1783,7 @@ const Home: NextPage = () => {
                                 // }}der-0
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1805,7 +1810,7 @@ const Home: NextPage = () => {
                                 // }}der-0
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1832,7 +1837,7 @@ const Home: NextPage = () => {
                                 // }}der-0
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1859,7 +1864,7 @@ const Home: NextPage = () => {
                                 // }}der-0
                               />
                               ◼
-                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-white pl-1 border-0 border-black text-center"
+                              {!isChecked && <input className="sm:mb-[1%] mb-2 w-[150px] h-10 mx-4 text-black pl-1 border-0 border-black text-center"
                                 type="number"
                                 step="any"
                                 min="0"
@@ -1924,7 +1929,7 @@ const Home: NextPage = () => {
                         />
                         {isSOLChecked &&
                           <div className="flex items-center">
-                            <input className="mb-[1%] w-[150px] mx-4 text-white pl-1 border-0 border-black"
+                            <input className="mb-[1%] w-[150px] mx-4 text-black pl-1 border-0 border-black"
                               type="number"
                               step="any"
                               min="0"
@@ -2238,7 +2243,7 @@ const Home: NextPage = () => {
                     <h1 className="font-bold mb-5 text-3xl uppercase">Domains sending</h1>
                     <form className="mt-[3%] mb-[2%]">
 
-                      <input className="mb-[2%] md:w-[480px] text-center mx-4 text-white pl-1 border-0 border-black"
+                      <input className="mb-[2%] md:w-[480px] text-center mx-4 text-black pl-1 border-0 border-black"
                         type="text"
                         required
                         placeholder="Receiver Address"
@@ -2354,7 +2359,7 @@ const Home: NextPage = () => {
                       </div>
 
                       <div>
-                        <input className="sm:mb-[1%] mb-2 md:w-[480px] text-center mx-4 text-white pl-1 border-0 border-black"
+                        <input className="sm:mb-[1%] mb-2 md:w-[480px] text-center mx-4 text-black pl-1 border-0 border-black"
                           type="text"
                           required
                           placeholder=".sol domain name #9"
@@ -2367,7 +2372,7 @@ const Home: NextPage = () => {
                       </div>
 
                       <div>
-                        <input className="sm:mb-[1%] mb-2 md:w-[480px] text-center mx-4 text-white pl-1 border-0 border-black"
+                        <input className="sm:mb-[1%] mb-2 md:w-[480px] text-center mx-4 text-black pl-1 border-0 border-black"
                           type="text"
                           required
                           placeholder=".sol domain name #10"
@@ -2479,4 +2484,4 @@ const Home: NextPage = () => {
     </div>
   );
 }
-export default Home
+export default Fm
