@@ -18,7 +18,7 @@ import Papa from "papaparse";
 
 import { Nft } from '../types'
 
-const approvedAccounts = ['Web3 Chibis in the Solana network. 3,333 chibified avatars ready to take on the metaverse and save the decentralization movement. The Shady Class is the OG NFT Collection under under W3B Industries.', 'vesseLs of SHADIES NFTs waiting to be awakened for their evolution. An evolution experience from The Shady Class.']
+// const approvedAccounts = ['Web3 Chibis in the Solana network. 3,333 chibified avatars ready to take on the metaverse and save the decentralization movement. The Shady Class is the OG NFT Collection under under W3B Industries.', 'vesseLs of SHADIES NFTs waiting to be awakened for their evolution. An evolution experience from The Shady Class.']
 
 
 const walletPublicKey = "";
@@ -1062,51 +1062,51 @@ const Fm: NextPage = () => {
     }
   }
 
-  const [allowed, setAllowed] = useState(false)
+  // const [allowed, setAllowed] = useState(false)
 
-  const GET_NFTS = gql`
-    query GetNfts($owners: [PublicKey!], $limit: Int!, $offset: Int!) {
-      nfts(owners: $owners, limit: $limit, offset: $offset) {
-        address
-        mintAddress
-        name
-        description
-        image
-        owner {
-          address
-          associatedTokenAccountAddress
-        }
-      }
-    }
-  `
+  // const GET_NFTS = gql`
+  //   query GetNfts($owners: [PublicKey!], $limit: Int!, $offset: Int!) {
+  //     nfts(owners: $owners, limit: $limit, offset: $offset) {
+  //       address
+  //       mintAddress
+  //       name
+  //       description
+  //       image
+  //       owner {
+  //         address
+  //         associatedTokenAccountAddress
+  //       }
+  //     }
+  //   }
+  // `
 
-  useMemo(() => {
-    if (publicKey?.toBase58()) {
-      client
-        .query({
-          query: GET_NFTS,
-          variables: {
-            owners: [publicKey?.toBase58()],
-            offset: 0,
-            limit: 10000
-          }
-        })
-        .then(res => setNfts(res.data.nfts))
-    } else {
-      setNfts([])
-      setSending([])
-      setTo('')
-    }
-  }, [publicKey?.toBase58()])
+  // useMemo(() => {
+  //   if (publicKey?.toBase58()) {
+  //     client
+  //       .query({
+  //         query: GET_NFTS,
+  //         variables: {
+  //           owners: [publicKey?.toBase58()],
+  //           offset: 0,
+  //           limit: 10000
+  //         }
+  //       })
+  //       .then(res => setNfts(res.data.nfts))
+  //   } else {
+  //     setNfts([])
+  //     setSending([])
+  //     setTo('')
+  //   }
+  // }, [publicKey?.toBase58()])
 
-  useMemo(() => {
-    nfts.map((nft) => {
-      if (approvedAccounts.includes(nft.description)) {
-        console.log('approved')
-        setAllowed(true)
-      }
-    })
-  }, [nfts])
+  // useMemo(() => {
+  //   nfts.map((nft) => {
+  //     if (approvedAccounts.includes(nft.description)) {
+  //       console.log('approved')
+  //       setAllowed(true)
+  //     }
+  //   })
+  // }, [nfts])
 
   return (
     <div>
@@ -1123,18 +1123,18 @@ const Fm: NextPage = () => {
         <div className={styles.main}>
         <Navbar />
           <div className="min-h-96 mb-20 pt-10 text-white">
-          {!connected && (<h1>HOLDER VERIFICATION</h1>)}
-            {connected && (<>
+          {/* {!connected && (<h1>HOLDER VERIFICATION</h1>)}
+            {connected && (<> */}
               {/* <h1 className='font-bold text-xs'>Wallet: {publicKey?.toBase58()}</h1> */}
-              {allowed ? <h1 className='text-sm font-bold text-green-500 mb-12'>VERIFIED HOLDER 👥🈯</h1>
+              {/* {allowed ? <h1 className='text-sm font-bold text-green-500 mb-12'>VERIFIED HOLDER 👥🈯</h1>
                 :
                 <a
                   href="https://magiceden.io/marketplace/tshc"
                 >
-                  <h1 className='text-center text-md text-red-500 font-bold mr-10 mb-12'>You do not hold any TSC/SHADIES NFT. 🤷⛔</h1>
+                  <h1 className='text-center text-md text-red-500 font-bold mb-12'>You do not hold any TSC/SHADIES NFT. 🤷⛔</h1>
                 </a>}
             </>)
-            }
+            } */}
             <div className="text-center w-full">
               <div className="w-full">
                 <h4 className="mb-2 text-2xl font-bold">
@@ -1148,8 +1148,8 @@ const Fm: NextPage = () => {
                 {nbToken == '' && CurrencyType == '' &&
                   <div>
                     <div className="max-w-4xl mx-auto">
-                    {connected && (<>
-                {allowed ? 
+                    {/* {connected && (<>
+                {allowed ?  */}
                       <ul className="text-center leading-10 ">
 
                         <li className="m-5" onClick={() => { setNbToken('one'); reset() }}>
@@ -1193,14 +1193,14 @@ const Fm: NextPage = () => {
                         </li>
 
                       </ul>
-                          :
+                          {/* :
                           <a
                             href="https://magiceden.io/marketplace/tshc"
                           >
                             <h1 className='text-center text-md text-amber-300 font-bold mr-10 mb-12'>Access our UTILITIES! 👻<br /> Click here to get a Shady NFT in Magiceden!</h1>
                           </a>}
                       </>)
-                      }
+                      } */}
                     </div>
                     
                   </div>
