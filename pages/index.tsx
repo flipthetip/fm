@@ -1111,7 +1111,7 @@ const Fm: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>FUND MANAGER</title>
+        <title>TOKEN BAZOOKA</title>
         <meta name='description' content='Send multiple NFTs at once!' />
         <link rel='icon' href='/newth.ico' />
       </Head>
@@ -1138,7 +1138,7 @@ const Fm: NextPage = () => {
             <div className="text-center w-full">
               <div className="w-full">
                 <h4 className="mb-2 text-2xl font-bold">
-                  Fund Manager - SOL/SPL Token 
+                  TOKEN BAZOOKA 
                 </h4>
                 <h3 className="font-semibold text-md pb-5" >Mass send SOL/SPL Token to many wallets at once.</h3>
                 <h3 className="text-sm pb-5 px-12" ><i>Note: If you just made a transfer of SOL/SPL token, the window will refresh if the transfer was <b>SUCCESSFUL</b>. <br/>
